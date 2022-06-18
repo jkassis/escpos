@@ -1,0 +1,30 @@
+{
+  "name": "@jkassis/escpos",
+  "author": {
+    "name": "Håvard Lian",
+    "email": "haavard@64bit.no",
+    "url": "https://github.com/haavardlian"
+  },
+  "version": "2.0.2",
+  "description": "Library for printing to ESC/POS compatible printers",
+  "main": "./index.js",
+  "typings": "./",
+  "keywords": [
+    "esc/pos",
+    "escpos",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkassis/escpos.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkassis/escpos/issues"
+  },
+  "homepage": "https://github.com/jkassis/escpos",
+  "dependencies": {
+    "iconv-lite": "0.4.24",
+    "pngjs": "3.3.3"
+  }
+}
