@@ -1,24 +1,26 @@
 {
-    "include": [
-        "src/**/*.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ],
-    "compilerOptions": {
-        "outDir": "dist/",
-        "declaration": true,
-        "target": "es6",
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "noImplicitThis": true,
-        "noImplicitReturns": true,
-        "noLib": false,
-        "preserveConstEnums": true,
-        "typeRoots": [
-            "node_modules/@types"
-        ],
-        "types": ["node", "serialport", "ws", "usb", "pngjs"]
-    }
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noLib": false,
+    "outDir": "dist/",
+    "plugins": [],
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "ESNext",
+    "typeRoots": ["node_modules/@types"],
+  }
 }
