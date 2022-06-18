@@ -41,7 +41,7 @@ jspm_packages
 .ts-node/
 
 # Compiled typescript
-dist/
+# dist/
 
 # Test image
 sign.png
