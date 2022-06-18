@@ -1,4 +1,4 @@
-var exec = require('child_process').exec;
+import { exec } from 'child_process'
 
 exec('git rev-parse --abbrev-ref HEAD', function (error, branch) {
     if (branch === "master\n") process.exit(0);
