@@ -169,7 +169,9 @@ export default class Printer {
         return this
     }
 
-    public qr(code: string, errorCorrect: QRErrorCorrectLevel, size: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16): Printer {
+    public qr(code: string,
+        errorCorrect: QRErrorCorrectLevel,
+        size: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16): Printer {
         this.write(GS)
         this.write("(k")
         this.buffer.writeUInt16LE(code.length + 3)

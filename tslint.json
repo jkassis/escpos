@@ -16,6 +16,8 @@
         "arrow-parens": false,
         "eofline": true,
         "no-console": [false],
-        "whitespace": false
+        "whitespace": false,
+        "align": true,
+        "space-before-function-paren": false
     }
 }
