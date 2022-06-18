@@ -1,7 +1,7 @@
-import * as Commands from "./Commands";
-import Printer from "./Printer";
+import * as Commands from "./Commands"
+import Printer from "./Printer"
 
 export {
     Commands,
     Printer
-};
+}

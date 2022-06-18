@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "name": "escpos-print",
+  "name": "@jkassis/escpos",
   "bugs": {
     "url": "https://github.com/jkassis/escpos/issues"
   },
@@ -39,13 +39,14 @@
     "fs-extra": "7.0.1",
     "ts-node": "7.0.1",
     "tslint": "5.12.0",
-    "typescript": "3.2.2"
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "iconv-lite": "0.4.24",
     "pngjs": "3.3.3"
   },
   "scripts": {
+    "prepare": "tsc",
     "compile": "tsc",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "pack": "yarn run compile && node scripts/createPackageDir.js",
