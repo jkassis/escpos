@@ -1,5 +1,5 @@
 {
-  "version": "2.0.2",
+  "version": "2.0.3",
   "name": "@jkassis/escpos",
   "bugs": {
     "url": "https://github.com/jkassis/escpos/issues"
@@ -49,7 +49,7 @@
     "prepare": "tsc",
     "compile": "tsc",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "pack": "yarn run compile && node scripts/createPackageDir.js",
+    "pack": "yarn run compile",
     "preversion": "node scripts/isMaster.js && yarn run lint",
     "version": "yarn run pack",
     "postversion": "git push && git push --tags"

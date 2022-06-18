@@ -5,7 +5,7 @@
     "email": "haavard@64bit.no",
     "url": "https://github.com/haavardlian"
   },
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Library for printing to ESC/POS compatible printers",
   "main": "./index.js",
   "typings": "./",

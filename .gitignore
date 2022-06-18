@@ -42,7 +42,6 @@ jspm_packages
 
 # Compiled typescript
 # dist/
-**/tsconfig.tsbuildinfo
 
 # Test image
 sign.png
