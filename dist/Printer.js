@@ -1,6 +1,5 @@
-import * as iconv from "iconv-lite";
-import { DrawerPin, Font, Justification, PDF417ErrorCorrectLevel, PDF417Type, RasterMode, TextMode, Underline } from "./Commands";
-import MutableBuffer from "./MutableBuffer";
+import { DrawerPin, Font, Justification, PDF417ErrorCorrectLevel, PDF417Type, RasterMode, TextMode, Underline } from "./Commands.js";
+import MutableBuffer from "./MutableBuffer.js";
 const ESC = 0x1B;
 const GS = 0x1D;
 export default class Printer {
@@ -211,12 +210,12 @@ export default class Printer {
         this.buffer.write(raster.data);
         return this;
     }
-    writeLine(value, encoding) {
-        return this.write(`${value}\n`, encoding);
+    writeLine(value) {
+        return this.write(`${value}\n`);
     }
-    writeList(values, encoding) {
+    writeList(values) {
         for (const value of values) {
-            this.writeLine(value, encoding);
+            this.writeLine(value);
         }
         return this;
     }
@@ -224,12 +223,12 @@ export default class Printer {
         this.buffer.clear();
         return this;
     }
-    write(value, encoding) {
+    write(value) {
         if (typeof value === "number") {
             this.buffer.writeUInt8(value);
         }
         else if (typeof value === "string") {
-            this.buffer.write(iconv.encode(value, encoding || this.encoding));
+            this.buffer.write(Buffer.from(value, 'ascii'));
         }
         else {
             this.buffer.write(value);

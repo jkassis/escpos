@@ -1,5 +1,5 @@
 import { PNG } from "pngjs";
-import { createStreamFromPath } from "./Utils";
+import { createStreamFromPath } from "./Utils.js";
 export default class Image {
     static async load(path) {
         const stream = await createStreamFromPath(path);

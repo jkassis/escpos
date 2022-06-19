@@ -1,3 +1,3 @@
-import * as Commands from "./Commands";
-import Printer from "./Printer";
+import * as Commands from "./Commands.js";
+import Printer from "./Printer.js";
 export { Commands, Printer };

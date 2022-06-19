@@ -1,4 +1,3 @@
-import * as iconv from "iconv-lite"
 import {
     Barcode, CodeTable, Color, DrawerPin, Font,
     Justification, PDF417ErrorCorrectLevel, PDF417Type,
@@ -268,13 +267,13 @@ export default class Printer {
         return this
     }
 
-    public writeLine(value: string, encoding?: string): Printer {
-        return this.write(`${value}\n`, encoding)
+    public writeLine(value: string): Printer {
+        return this.write(`${value}\n`)
     }
 
-    public writeList(values: string[], encoding?: string): Printer {
+    public writeList(values: string[]): Printer {
         for (const value of values) {
-            this.writeLine(value, encoding)
+            this.writeLine(value)
         }
         return this
     }
@@ -284,11 +283,11 @@ export default class Printer {
         return this
     }
 
-    public write(value: string | Uint8Array | number, encoding?: string): Printer {
+    public write(value: string | Uint8Array | number): Printer {
         if (typeof value === "number") {
             this.buffer.writeUInt8(value)
         } else if (typeof value === "string") {
-            this.buffer.write(iconv.encode(value, encoding || this.encoding))
+            this.buffer.write(Buffer.from(value, "ascii"))
         } else {
             this.buffer.write(value)
         }

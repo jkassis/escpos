@@ -44,7 +44,6 @@
     "typescript": "^4.2.4"
   },
   "dependencies": {
-    "iconv-lite": "0.4.24",
     "pngjs": "3.3.3"
   },
   "scripts": {

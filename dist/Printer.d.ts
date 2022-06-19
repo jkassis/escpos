@@ -1,5 +1,5 @@
-import { Barcode, CodeTable, Color, DrawerPin, Font, Justification, PDF417ErrorCorrectLevel, PDF417Type, Position, QRErrorCorrectLevel, RasterMode, TextMode, Underline } from "./Commands";
-import Image from "./Image";
+import { Barcode, CodeTable, Color, DrawerPin, Font, Justification, PDF417ErrorCorrectLevel, PDF417Type, Position, QRErrorCorrectLevel, RasterMode, TextMode, Underline } from "./Commands.js";
+import Image from "./Image.js";
 export default class Printer {
     private encoding;
     private buffer;
@@ -27,8 +27,8 @@ export default class Printer {
     beep(): Printer;
     setLineSpacing(spacing?: number): Printer;
     raster(image: Image, mode?: RasterMode): Printer;
-    writeLine(value: string, encoding?: string): Printer;
-    writeList(values: string[], encoding?: string): Printer;
+    writeLine(value: string): Printer;
+    writeList(values: string[]): Printer;
     reset(): Printer;
-    write(value: string | Uint8Array | number, encoding?: string): Printer;
+    write(value: string | Uint8Array | number): Printer;
 }
