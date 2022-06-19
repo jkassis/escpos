@@ -228,7 +228,7 @@ export default class Printer {
             this.buffer.writeUInt8(value);
         }
         else if (typeof value === "string") {
-            this.buffer.write(Buffer.from(value, 'ascii'));
+            this.buffer.write(Buffer.from(value, "ascii"));
         }
         else {
             this.buffer.write(value);
