@@ -1,5 +1,5 @@
 {
-  "version": "2.1.4",
+  "version": "2.1.5",
   "name": "@jkassis/escpos2",
   "bugs": {
     "url": "https://github.com/jkassis/escpos/issues"
